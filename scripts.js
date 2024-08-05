@@ -1,3 +1,20 @@
+
+const displayValue = "New Display!";
+const display = document.querySelector("#display");
+
+const buttons = document.querySelectorAll('button');
+
+
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        if (button.style)
+
+
+
+    });
+});
+
+
 function operate(num1, operator, num2)
 {
     if (!operator) return '0';
@@ -22,4 +39,9 @@ function divide(num1, num2)
 function multiply(num1, num2)
 {
     return num1 * num2;
+}
+
+function setDisplay()
+{
+    display.textContent = displayValue; 
 }
