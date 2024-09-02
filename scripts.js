@@ -1,18 +1,18 @@
 
-const displayValue = "New Display!";
-const display = document.querySelector("#display");
-
+let displayValue = '';
+const screen = document.getElementById('screen');
 const buttons = document.querySelectorAll('button');
 
 
 buttons.forEach(button => {
     button.addEventListener('click', () => {
-        if (button.style)
-
-
-
+            displayValue += button.textContent;
+            updateDisplay();
+            console.log("Number pressed");
     });
 });
+
+
 
 
 function operate(num1, operator, num2)
@@ -41,7 +41,7 @@ function multiply(num1, num2)
     return num1 * num2;
 }
 
-function setDisplay()
+function updateDisplay()
 {
-    display.textContent = displayValue; 
+    screen.textContent = displayValue; 
 }
