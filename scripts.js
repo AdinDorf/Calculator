@@ -44,31 +44,6 @@ enter.addEventListener('click', () =>
     updateDisplay();
 });
 
-function calculate(equation)
-{
-    console.log('Recieved: ' + equation);
-    equation = equation + '';
-    let arr = equation.split("x");
-
-    if (arr.length > 1) {
-        //multiplaction left in the string
-        multiply(calculate(parseInt(arr[0])),calculate(parseInt(arr[1])));
-    }
-    arr = equation.split('/',2);
-    if (arr.length > 1) {
-        divide(calculate(arr[0]), calculate(arr[1]));
-    }
-    arr = equation.split('+',2);
-    if (arr.length > 1) {
-        add(calculate(arr[0]), calculate(arr[1]));
-    }
-    arr = equation.split('-',2);
-    if (arr.length > 1) {
-        subtract(calculate(arr[0]), calculate(arr[1]));
-    }
-
-    return parseInt(arr[0]);
-}
 
 function operate(num1, operator, num2)
 {
