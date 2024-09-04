@@ -29,3 +29,12 @@
     gap: 2px;
 }
 
+#screen {
+    background-color: burlywood;
+    margin: 10px;
+    border-style: solid;
+    min-height: 20px;
+    min-width: 110px;
+    text-align: center
+;}
+
